@@ -1,22 +1,27 @@
 import { Link } from "react-router-dom"
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-export function Navbar(){
-    return(
-        <nav className="navbar navbar-expand-md text-light bg-primary">
-            <ul className="nav">
-                <li>
-                    <Link className="text-light" to='/'>Home</Link>
-                </li>
-                <li>
-                    <Link className="text-light" to='/finance'>Finance</Link>
-                </li>
-                <li>
-                    <Link className="text-light" to='/register'>Register</Link>
-                </li>
-                <li>
-                    <Link className="text-light" to='/login'>Login</Link>
-                </li>
-            </ul>
+export function Navbar() {
+    return (
+        <nav className="navbar navbar-default navbar-expand-md text-light bg-primary">
+            <div className="container-fluid">
+                <div className="navbar-header">
+                    <Link className="text-light navbar-brand" to='/'>Consisten6-Finance</Link>
+                </div>
+                <ul className="nav navbar-nav">
+                    <li>
+                        <Link className="text-light" to='/'>Home</Link>
+                    </li>
+                    <li>
+                        <Link className="text-light" to='/finance'>Finance</Link>
+                    </li>
+                    <li>
+                        <Link className="text-light" to='/register'>Register</Link>
+                    </li>
+                    <li>
+                        <Link className="text-light" to='/login'>Login</Link>
+                    </li>
+                </ul>
+            </div>
         </nav>
     )
 }
