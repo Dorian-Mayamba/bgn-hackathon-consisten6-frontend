@@ -13,6 +13,9 @@ export function Navbar(){
                 <li>
                     <Link className="text-light" to='/register'>Register</Link>
                 </li>
+                <li>
+                    <Link className="text-light" to='/login'>Login</Link>
+                </li>
             </ul>
         </nav>
     )
