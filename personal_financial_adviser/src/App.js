@@ -5,6 +5,7 @@ import { Home } from './components/Home';
 import { Finance } from './components/Finance';
 import { Login } from './components/Login';
 import { Navbar } from './components/Navbar';
+import { Register } from './components/Register';
 function App() {
   return (
     <Router>
@@ -12,7 +13,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/finance' element={<Finance/>}/>
+<<<<<<< Updated upstream
         <Route path= '/login' element={<Login/>}/>
+=======
+        <Route path='/register' element={<Register/>}/>
+>>>>>>> Stashed changes
       </Routes>
     </Router>
   );

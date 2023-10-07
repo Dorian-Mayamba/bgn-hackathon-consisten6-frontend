@@ -11,7 +11,7 @@ export function Navbar(){
                     <Link className="text-light" to='/finance'>Finance</Link>
                 </li>
                 <li>
-                    <Link className="text-light" to= '/login'>Login</Link>
+                    <Link className="text-light" to='/register'>Register</Link>
                 </li>
             </ul>
         </nav>
