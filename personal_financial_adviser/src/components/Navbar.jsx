@@ -10,6 +10,9 @@ export function Navbar(){
                 <li>
                     <Link className="text-light" to='/finance'>Finance</Link>
                 </li>
+                <li>
+                    <Link className="text-light" to= '/login'>Login</Link>
+                </li>
             </ul>
         </nav>
     )
