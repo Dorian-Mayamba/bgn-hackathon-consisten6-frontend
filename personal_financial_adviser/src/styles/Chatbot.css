@@ -99,3 +99,11 @@
   background: #efefef; /* Background color for user's chat bubble */
   color: #333;
 }  
+
+body {
+  background-image: url('https://i.ibb.co/561562S/background-photo-cropped.png');
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom right; /* Adjust for other corners (e.g., 'top left', 'bottom right', 'bottom left') */
+}
