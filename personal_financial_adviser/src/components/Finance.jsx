@@ -68,7 +68,7 @@ export function Finance() {
     }
 
     return (
-        <div>
+        <div className='finance-group'>
             <h1 className="text-center">Manage Your Finances Here</h1>
             <form action="127.0.0.1:8000/chatgpt" className="w-50 mx-auto" onSubmit={(e)=>{
                 e.preventDefault();

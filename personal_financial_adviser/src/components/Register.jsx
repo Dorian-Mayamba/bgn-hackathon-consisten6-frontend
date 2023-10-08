@@ -1,7 +1,7 @@
 export function Register() {
     return (
-        <div>
-            <div style={{marginLeft: 15, marginRight: 15}}>
+        <div className="register-box">
+            <div style={{marginLeft: 150, marginRight: 400}}>
                 <h1>Register For Our Service</h1>
                 <h4>It only takes a minute</h4>
                 <form action="/action_page.php">

@@ -16,11 +16,6 @@ export function Login() {
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <table width="100%" height="100%">
-    <tr>
-        <td align="right" valign="bottom">
-            <img src="https://i.ibb.co/561562S/background-photo-cropped.png" alt="bug" height="500" width="500" />
-        </td>
-    </tr>
 </table>
             </form>
         </div>
