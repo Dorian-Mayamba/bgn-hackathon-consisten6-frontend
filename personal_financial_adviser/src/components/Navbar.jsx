@@ -8,6 +8,7 @@ export function Navbar() {
         <nav className="navbar navbar-default navbar-expand-md text-light bg-primary">
             <div className="container-fluid">
                 <div className="navbar-header">
+                    <img src= "https://i.ibb.co/wdgtqs1/Budget-Buddy-logo.png" alt="bug" height={100} width = {100} />
                     <Link className="text-light navbar-brand" to='/'>BudgetBuddy</Link>
                 </div>
                 <ul className="nav navbar-nav">
