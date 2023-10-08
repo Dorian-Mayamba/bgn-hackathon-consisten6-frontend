@@ -1,3 +1,11 @@
-li:hover{
-    color: black;
+/* Navbar.css */
+
+/* Spacing for list items */
+.navbar-nav li {
+  margin-right: 10px; /* Adjust the spacing as needed */
+}
+
+/* Change color on hover */
+.navbar-nav li a {
+  color: black;
 }

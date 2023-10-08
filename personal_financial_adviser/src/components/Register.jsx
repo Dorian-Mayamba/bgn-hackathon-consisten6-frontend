@@ -1,7 +1,8 @@
 export function Register() {
     return (
         <div>
-            <h1>Register</h1>
+            <h1>Register For Our Service</h1>
+            <h4>It only takes a minute</h4>
             <form action="/action_page.php">
                 <div className="form-group">
                     <label for="forename">First Name:</label>
