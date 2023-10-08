@@ -7,18 +7,24 @@ import { Login } from './components/Login';
 import { Navbar } from './components/Navbar';
 import { Chatbot } from './components/Chatbot';
 import { Register } from './components/Register';
+import { UserProvider } from './contexts/UserContext';
+import { DashBoard } from './components/Dashboard';
 function App() {
   return (
     <Router>
+      <UserProvider>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/finance' element={<Finance/>}/>
         <Route path= '/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/dashboard/:id' element={<DashBoard/>}/>
         <Route path='/chatbot' element={<Chatbot/>}/>
       </Routes>
+      </UserProvider>
     </Router>
+      
   );
 }
 

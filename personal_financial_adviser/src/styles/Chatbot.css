@@ -33,20 +33,21 @@
     top: 0;
     left: 0;
     z-index: 0; /* Place it behind content */
-    margin-top: -10px; /* Adjust margin to bring it closer to the navbar */
+    margin-top: -20px; /* Adjust margin to bring it closer to the navbar */
   }
   
   /* Chat Box Styles */
   .box {
     /* Your existing styles for the chat box */
-    width: 50%; /* Make it 100% wide */
+    width: 100%; /* Make it 100% wide */
     height: 90%; /* Adjust the height as needed */
     max-height: 90vh; /* Maximum height to ensure it fits within the screen */
     overflow-y: auto; /* Add scroll if content exceeds height */
     padding: 10px; /* Add padding to make sides closer together */
     border-radius: 0 0 10px 10px; /* Curved corners at the bottom */
+    margin-left: 635px;
   }
-  
+
   /* Blue background at the bottom */
   .background-bottom {
     background: #007bff; /* Blue background color */

@@ -1,5 +1,6 @@
 import '../styles/home.css';
-export function Home(){
+import { useEffect, useState } from "react"
+import { useUser } from "../contexts/UserContext"
     return (
             <div className='home-page'>
                 <div className="navbar-header"></div>
@@ -7,6 +8,5 @@ export function Home(){
                   <p>Meet the perfect financial advisor for you.</p>
                   <h1>Consult your advisor anywhere, at any time.</h1>
                 </div>
-            </div>
     )
 }
