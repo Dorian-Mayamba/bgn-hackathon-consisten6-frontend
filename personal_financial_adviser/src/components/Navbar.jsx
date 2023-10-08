@@ -1,9 +1,46 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../styles/styles.css';
 import '../styles/Navbar.css';
-import $ from 'jquery';
+import { useEffect } from "react";
+import { useUser } from "../contexts/UserContext";
 export function Navbar() {
+
+    const { currentUser, setCurrentUser } = useUser();
+
+    useEffect(() => {
+        console.log(currentUser);
+    })
+
+    const RenderLinks = () => {
+        if (currentUser != null) {
+            return (
+                <>
+                    <li>
+                        <Link className="text-light" to={`dashboard/${currentUser.data.id}`}>Dashboard</Link>
+                    </li>
+                    <li>
+                        <Link className="text-light" to='#'>Logout</Link>
+                    </li>
+                    <li>
+                        <Link className="text-light" to='/finance'>Finance</Link>
+                    </li>
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <li>
+                        <Link className="text-light" to='/register'>Register</Link>
+                    </li>
+                    <li>
+                        <Link className="text-light" to='/login'>Login</Link>
+                    </li>
+                </>
+            )
+        }
+    }
+
     return (
         <nav className="navbar navbar-default navbar-expand-md text-light bg-primary">
             <div className="container-fluid">
@@ -15,15 +52,7 @@ export function Navbar() {
                     <li>
                         <Link className="text-light" to='/'>Home</Link>
                     </li>
-                    <li>
-                        <Link className="text-light" to='/finance'>Finance</Link>
-                    </li>
-                    <li>
-                        <Link className="text-light" to='/register'>Register</Link>
-                    </li>
-                    <li>
-                        <Link className="text-light" to='/login'>Login</Link>
-                    </li>
+                    <RenderLinks />
                 </ul>
             </div>
         </nav>
