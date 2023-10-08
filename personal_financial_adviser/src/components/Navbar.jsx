@@ -53,6 +53,12 @@ export function Navbar() {
                         <Link className="text-light" to='/'>Home</Link>
                     </li>
                     <RenderLinks />
+                    <li>
+                        <Link className="text-light" to='/finance'>Finance</Link>
+                    </li>
+                    <li>
+                        <Link className="text-light" to='/chatbot'>Chatbot</Link>
+                    </li>
                 </ul>
             </div>
         </nav>
