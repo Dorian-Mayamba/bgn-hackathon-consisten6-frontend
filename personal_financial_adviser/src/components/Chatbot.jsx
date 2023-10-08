@@ -22,11 +22,13 @@ function ChatBox() {
   return (
     <div className="box">
       {messages.map((message, index) => (
-        <ChatMessage
-          key={index}
-          message={message.text}
-          isUser={message.isUser}
-        />
+        <div>
+            <ChatMessage
+                key={index}
+                message={message.text}
+                isUser={message.isUser}
+            />
+        </div>
       ))}
     </div>
   );
