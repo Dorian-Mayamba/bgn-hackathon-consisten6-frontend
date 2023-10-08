@@ -5,6 +5,7 @@ import { Home } from './components/Home';
 import { Finance } from './components/Finance';
 import { Login } from './components/Login';
 import { Navbar } from './components/Navbar';
+import { Chatbot } from './components/Chatbot';
 import { Register } from './components/Register';
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/finance' element={<Finance/>}/>
         <Route path= '/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/chatbot' element={<Chatbot/>}/>
       </Routes>
     </Router>
   );

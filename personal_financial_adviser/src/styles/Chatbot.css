@@ -1,0 +1,100 @@
+/* Center the chatbot and make it full-screen */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* 100% of viewport width */
+    height: 100vh; /* 100% of viewport height */
+    position: relative;
+    padding: 10px; /* Add padding to make sides closer together */
+  }
+  
+  /* Chatbot Title */
+  .title {
+    background: #007bff; /* Blue background color */
+    color: white;
+    line-height: 2.5;
+    border-radius: 10px 10px 0 0; /* Curved corners at the top */
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0;
+    width: 100%; /* Full width of the screen */
+    position: relative; /* Add positioning for the vertical spacing */
+    z-index: 1; /* Place title above the background */
+  }
+  
+  /* Blue background at the top */
+  .background-top {
+    background: #007bff; /* Blue background color */
+    border-radius: 10px 10px 0 0; /* Curved corners at the top */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Place it behind content */
+    margin-top: -10px; /* Adjust margin to bring it closer to the navbar */
+  }
+  
+  /* Chat Box Styles */
+  .box {
+    /* Your existing styles for the chat box */
+    width: 50%; /* Make it 100% wide */
+    height: 90%; /* Adjust the height as needed */
+    max-height: 90vh; /* Maximum height to ensure it fits within the screen */
+    overflow-y: auto; /* Add scroll if content exceeds height */
+    padding: 10px; /* Add padding to make sides closer together */
+    border-radius: 0 0 10px 10px; /* Curved corners at the bottom */
+  }
+  
+  /* Blue background at the bottom */
+  .background-bottom {
+    background: #007bff; /* Blue background color */
+    border-radius: 10px 10px 0 0; /* Curved corners at the bottom */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0; /* Place it behind content */
+  }
+  
+  /* Typing Area Styles */
+  .typing-area {
+    width: 100%;
+    background: #007bff; /* Set the background to the same color as the title */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input-field {
+    /* Your existing styles for the input field */
+    width: 100%; /* Make it 100% wide */
+    display: flex; /* Add flex display for button alignment */
+  }
+  
+  .input-field input {
+    /* Your existing styles for the input */
+    flex-grow: 1; /* Allow input to grow and take remaining space */
+    margin-right: 10px; /* Add some spacing between input and button */
+  }
+  
+  .input-field button {
+    /* Your existing styles for the button */
+    width: 30%; /* Make it 30% wide to match the chatbox */
+  }
+  .item {
+    background: #007bff; /* Blue background for chat bubbles */
+    color: white;
+    border-radius: 10px; /* Rounded corners for chat bubbles */
+    max-width: 45%; /* Limit the width of chat bubbles */
+    padding: 10px;
+    margin: 10px;
+    text-align: center; /* Center the text content within the chat bubble */
+  }
+
+.item.right {
+  background: #efefef; /* Background color for user's chat bubble */
+  color: #333;
+}  
