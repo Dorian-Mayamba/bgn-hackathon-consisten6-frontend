@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../styles/styles.css';
 import '../styles/Navbar.css';
+import $ from 'jquery';
 export function Navbar() {
     return (
         <nav className="navbar navbar-default navbar-expand-md text-light bg-primary">
@@ -26,4 +27,6 @@ export function Navbar() {
             </div>
         </nav>
     )
+
+
 }
