@@ -25,11 +25,7 @@ export function Navbar() {
                         <Link className="" to='#'>Logout</Link>
                     </li>
                     <li>
-<<<<<<< Updated upstream
-                        <Link className="text-light" to={`chatbot/${currentUser.data.id}`}>Chatbot</Link>
-=======
                         <Link className="" to='/chatbot'>Chatbot</Link>
->>>>>>> Stashed changes
                     </li>
                     <li>
                         <Link className="" to={`entry/${currentUser.data.id}`}>FinanceEntry</Link>
