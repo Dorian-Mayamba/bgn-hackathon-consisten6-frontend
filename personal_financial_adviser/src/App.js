@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { Home } from './components/Home';
-import { Finance } from './components/Finance';
 import { Login } from './components/Login';
 import { Navbar } from './components/Navbar';
 import { Chatbot } from './components/Chatbot';
@@ -21,7 +20,7 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/dashboard/:id' element={<DashBoard/>}/>
         <Route path='/entry/:id' element={<FinanceEntry/>}/>
-        <Route path='/chatbot' element={<Chatbot/>}/>
+        <Route path='/chatbot/:id' element={<Chatbot/>}/>
       </Routes>
       </UserProvider>
     </Router>

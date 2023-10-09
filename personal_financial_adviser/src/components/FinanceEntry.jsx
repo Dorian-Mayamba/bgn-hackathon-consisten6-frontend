@@ -70,7 +70,7 @@ export function FinanceEntry(){
                     <input type="number" name="current_debt" id="current_debt" placeholder="enter your current debt" className="form-control" required/>
                 </div>
                 <div className="form-group">
-                    <input type="number" name="time_to_pay" id="time_to_pay" placeholder="enter your time to pay" className="form-control" required/>
+                    <input type="number" name="time_to_pay" id="time_to_pay" placeholder="enter your payment period" className="form-control" required/>
                 </div>
                 <div className="form-group">
                     <select className="form-control" name="risk_tolerance" id="risk_tolerance" required>
@@ -86,6 +86,7 @@ export function FinanceEntry(){
                         <option value="Saving">Saving</option>
                         <option value="Invest">Invest</option>
                         <option value="Debt management">Debt management</option>
+                        <option value="Retirement plan">Retirement plan</option>
                     </select>
                 </div>
                 <div className="form-group">

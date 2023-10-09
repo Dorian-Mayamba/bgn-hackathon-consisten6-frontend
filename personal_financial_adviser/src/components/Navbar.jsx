@@ -9,7 +9,9 @@ export function Navbar() {
     const { currentUser, setCurrentUser } = useUser();
 
     useEffect(() => {
-        console.log(currentUser);
+        if(!localStorage.getItem('user')){
+            setCurrentUser(null);
+        }
     })
 
     const RenderLinks = () => {
@@ -23,7 +25,7 @@ export function Navbar() {
                         <Link className="text-light" to='#'>Logout</Link>
                     </li>
                     <li>
-                        <Link className="text-light" to='/chatbot'>Chatbot</Link>
+                        <Link className="text-light" to={`chatbot/${currentUser.data.id}`}>Chatbot</Link>
                     </li>
                     <li>
                         <Link className="text-light" to={`entry/${currentUser.data.id}`}>FinanceEntry</Link>
