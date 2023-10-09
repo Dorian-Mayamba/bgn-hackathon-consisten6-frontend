@@ -7,8 +7,11 @@
 
 /* Change color on hover */
 .navbar-nav li a {
+  font-size: larger;
+}
+.nav navbar-nav li a:hover{
   color: black;
 }
-li:hover{
-    color: black;
+.navbar-header img {
+  padding-bottom: 15px;
 }
