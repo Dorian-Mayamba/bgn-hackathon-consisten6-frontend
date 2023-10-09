@@ -8,8 +8,9 @@
 /* Change color on hover */
 .navbar-nav li a {
   font-size: larger;
+  color: white;
 }
-.nav navbar-nav li a:hover{
+.navbar-nav li a:hover{
   color: black;
 }
 .navbar-header img {
