@@ -23,7 +23,10 @@ export function Navbar() {
                         <Link className="text-light" to='#'>Logout</Link>
                     </li>
                     <li>
-                        <Link className="text-light" to='/finance'>Finance</Link>
+                        <Link className="text-light" to='/chatbot'>Chatbot</Link>
+                    </li>
+                    <li>
+                        <Link className="text-light" to={`entry/${currentUser.data.id}`}>FinanceEntry</Link>
                     </li>
                 </>
             )
@@ -53,12 +56,6 @@ export function Navbar() {
                         <Link className="text-light" to='/'>Home</Link>
                     </li>
                     <RenderLinks />
-                    <li>
-                        <Link className="text-light" to='/finance'>Finance</Link>
-                    </li>
-                    <li>
-                        <Link className="text-light" to='/chatbot'>Chatbot</Link>
-                    </li>
                 </ul>
             </div>
         </nav>
