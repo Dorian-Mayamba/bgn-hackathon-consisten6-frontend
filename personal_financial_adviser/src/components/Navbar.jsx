@@ -19,16 +19,20 @@ export function Navbar() {
             return (
                 <>
                     <li>
-                        <Link className="text-light" to={`dashboard/${currentUser.data.id}`}>Dashboard</Link>
+                        <Link className="" to={`dashboard/${currentUser.data.id}`}>Dashboard</Link>
                     </li>
                     <li>
-                        <Link className="text-light" to='#'>Logout</Link>
+                        <Link className="" to='#'>Logout</Link>
                     </li>
                     <li>
+<<<<<<< Updated upstream
                         <Link className="text-light" to={`chatbot/${currentUser.data.id}`}>Chatbot</Link>
+=======
+                        <Link className="" to='/chatbot'>Chatbot</Link>
+>>>>>>> Stashed changes
                     </li>
                     <li>
-                        <Link className="text-light" to={`entry/${currentUser.data.id}`}>FinanceEntry</Link>
+                        <Link className="" to={`entry/${currentUser.data.id}`}>FinanceEntry</Link>
                     </li>
                 </>
             )
@@ -36,10 +40,10 @@ export function Navbar() {
             return (
                 <>
                     <li>
-                        <Link className="text-light" to='/register'>Register</Link>
+                        <Link className="" to='/register'>Register</Link>
                     </li>
                     <li>
-                        <Link className="text-light" to='/login'>Login</Link>
+                        <Link className="" to='/login'>Login</Link>
                     </li>
                 </>
             )
@@ -55,7 +59,7 @@ export function Navbar() {
                 </div>
                 <ul className="nav navbar-nav">
                     <li>
-                        <Link className="text-light" to='/'>Home</Link>
+                        <Link className="" to='/'>Home</Link>
                     </li>
                     <RenderLinks />
                 </ul>
