@@ -2,78 +2,33 @@ import { useState } from 'react';
 import '../styles/Finance.css';
 import $ from 'jquery';
 import Chart from 'chart.js/auto'
+import { useUser } from '../contexts/UserContext';
 export function Finance() {
 
-    const displayExpensesChart = (e)=>{
-        e.preventDefault();
-        var chartStatus = Chart.getChart('myChart');
-        if(chartStatus!=undefined){
-            chartStatus.destroy();
-        }
+    const {currentUser, setCurrentUser} = useUser();
 
-        const chart = document.getElementById('myChart');
-        const chartPlot = new Chart(chart, {
-            type:'bar',
-            data:{
-                labels: ['food expense', 'rent expense', 'bills expense', 'miscellaneous expense', 'transportation expense'],
-                datasets:[{
-                    label: 'Expenses dataset',
-                    data: [$('#food_expense').val(),$('#rent_expense').val(),$('#bills_expense').val(),$('#miscellaneous_expense').val(),$('#transportation_expense').val()],
-                    backgroundColor: [
-                        'rgba(54, 162, 235, 0.2)'
-                    ],
-                    borderColor:[
-                        'rgba(54, 162, 235, 0.2)',
-                    ],
-                    borderWidth:1
-                }]
-            },
-        })
+    const askAdvice = async(e)=>{
+        e.preventDefault();
+        if(currentUser != null){
+            try{
+                var url = $(e.target).attr('action');
+                var response = await fetch(url + '/'+currentUser.data.id);
+                var data = await response.json();
+                $('.response').text(data.response);
+            }catch(err){
+                console.log(err);
+            }
+        }
     }
 
     const displayPieChart = (e) =>{
-        e.preventDefault();
-        let foodExpense =  parseInt($('#food_expense').val());
-        let rentExpense = parseInt($('#rent_expense').val());
-        let billsExpense = parseInt($('#bills_expense').val());
-        let miscellaneousExpense = parseInt($('#miscellaneous_expense').val());
-        let transportationExpense = parseInt($('#transportation_expense').val());
-        const totalExpenses = foodExpense + rentExpense + billsExpense + miscellaneousExpense + transportationExpense;
-        var monthlyIncomes = parseInt($('#monthly_incomes').val());
-        var disposableIncome = monthlyIncomes - totalExpenses;
-        let chartStatus = Chart.getChart('pie-chart');
-        if(chartStatus != undefined){
-            chartStatus.destroy();
-        }
-        var ctx = $('#pie-chart');
-        var chart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['food expense', 'rent expense', 'bills expense', 'miscellaneous expense', 'transportation expense', 'disposable income'],
-                datasets:[{
-                    label: 'Incomes comparison',
-                    data: [foodExpense, rentExpense, billsExpense, miscellaneousExpense, transportationExpense, disposableIncome],
-                    backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(216, 219, 42)',
-                        'rgb(50, 168, 82)',
-                        'rgb(147, 50, 168)',
-                        'rgb(227, 41, 187)',
-                        'rgb(227, 146, 41)'
-                    ],
-                    hoverOffset: 4
-                }]
-            }
-        })
+        
     }
 
     return (
         <div className='finance-group'>
             <h1 className="text-center">Manage Your Finances Here</h1>
-            <form action="127.0.0.1:8000/chatgpt" className="w-50 mx-auto" onSubmit={(e)=>{
-                e.preventDefault();
-                console.log($(e.target).attr('action'));
-            }}>
+            <form action="http://127.0.0.1:8000/account/chatbot" method='POST' className="w-50 mx-auto" onSubmit={(e)=>askAdvice(e)}>
                 <div className="form-group my-4">
                     <input type="number" className="form-control" name="age" id="age" placeholder="You age" required/>
                 </div>
@@ -110,16 +65,19 @@ export function Finance() {
                                 <canvas id='myChart'></canvas>
                             </div>
                             <div className="form-group">
-                                <input className='btn btn-lg btn-success' type="submit" value="Display chart" onClick={(e)=>displayExpensesChart(e)}/>
+                                <input className='btn btn-lg btn-success' type="submit" value="Display chart"/>
                             </div>
                             <div className="chart">
                                 <canvas id="pie-chart"></canvas>
                             </div>
                             <div className="form-group">
-                                <input type="submit" value="Display Pie chart" className='btn btn-success btn-lg' onClick={(e)=>displayPieChart(e)}/>
+                                <input type="submit" value="Display Pie chart" className='btn btn-success btn-lg'/>
                             </div>
                         </div>
-                        <button className='btn btn-danger btn-lg'>Invest</button>
+                        <button className='btn btn-danger btn-lg'>Ask for advice</button>
+                        <p className='response'>
+
+                        </p>
                     </div>
                 </div>
             </form>

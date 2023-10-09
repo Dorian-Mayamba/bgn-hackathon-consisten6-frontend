@@ -35,8 +35,6 @@ export function Login() {
                 </div>
                 <div className="form-group mb-3">
                     <label for="password">Password:</label>
-                    <input className="form-control" type="password" id="password" placeholder="Enter password" name="password" />
-
                     <input className="form-control" type="password" id="password" placeholder="Enter password" name="password" required/>
                 </div>
                 <div className="form-group mb-3">

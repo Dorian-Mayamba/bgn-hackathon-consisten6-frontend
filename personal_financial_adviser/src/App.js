@@ -9,6 +9,7 @@ import { Chatbot } from './components/Chatbot';
 import { Register } from './components/Register';
 import { UserProvider } from './contexts/UserContext';
 import { DashBoard } from './components/Dashboard';
+import { FinanceEntry } from './components/FinanceEntry';
 function App() {
   return (
     <Router>
@@ -16,10 +17,10 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/finance' element={<Finance/>}/>
         <Route path= '/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/dashboard/:id' element={<DashBoard/>}/>
+        <Route path='/entry/:id' element={<FinanceEntry/>}/>
         <Route path='/chatbot' element={<Chatbot/>}/>
       </Routes>
       </UserProvider>
