@@ -1,8 +1,9 @@
 import $ from 'jquery';
 import { useUser } from '../contexts/UserContext';
+import { useNavigate } from 'react-router';
 export function Login() {
     const {currentUser,setCurrentUser} = useUser();
-
+    const navigate = useNavigate();
     const LoginUser = async(e) =>{
         e.preventDefault();
         const elements = e.target.elements;
@@ -21,6 +22,7 @@ export function Login() {
             var data = await response.json();
             localStorage.setItem('user', data);
             setCurrentUser(data);
+            navigate('/', {replace:true})
         }catch(err){
             console.log(err);
         }

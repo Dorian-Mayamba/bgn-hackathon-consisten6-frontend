@@ -27,7 +27,7 @@ export function Register(e) {
                 }
                 return res.json()
                 .then(data=>{
-                    console.log(data);
+                    navigate('/login', {replace:true})
                 })
             })
         }catch(err){
